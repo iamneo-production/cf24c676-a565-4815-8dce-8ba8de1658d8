@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.css'
 import Key from './Key.js'
+import Display from './Display'
 const App = () => {
 
     const style = {
@@ -33,6 +34,8 @@ const App = () => {
         borderRadius : "15px",
         backgroundColor : "yellow"
     }
+
+
     return(
         <div style = {style} id = "drum-machine">
             <h1 style = {hstyle}>Drum Machine</h1>
@@ -46,6 +49,9 @@ const App = () => {
                 <Key id = 'Z'/>
                 <Key id = 'X'/>
                 <Key id = 'C'/>
+            </div>
+            <div id="display">
+                <Display/>
             </div>
             
         </div>
