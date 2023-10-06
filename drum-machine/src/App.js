@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import Key from './Key.js'
+
 
 import s1 from './sounds/Heater-1.mp3'
 import s2 from './sounds/Heater-2.mp3'
@@ -59,6 +59,15 @@ const App = () => {
         textAlign : "center"
     }
 
+    const bstyle = {
+        width : "80px",
+        height : "80px",
+        backgroundColor : "cyan",
+        fontSize : "35px",
+        border : "3px solid blue",
+        borderRadius : "15px",
+        tabIndex : "0"
+    }
     var [soundName,setSoundName] = React.useState('');
     
     const handlePress = (e) => {
@@ -116,16 +125,52 @@ const App = () => {
     return(
         <div style = {style} id = "drum-machine">
             <h1 style = {hstyle}>Drum Machine</h1>
+            <h2 style = {hstyle}>Press Tab to start</h2>
             <div id = "key-pad" style = {keyPadStyle} tabIndex={0} onKeyDown={handlePress}>
-                <Key id = 'Q' />
-                <Key id = 'W' />
-                <Key id = 'E' />
-                <Key id = 'A' />
-                <Key id = 'S' />
-                <Key id = 'D' />
-                <Key id = 'Z' />
-                <Key id = 'X' />
-                <Key id = 'C' />
+            <button style = {bstyle} onClick = {()=>
+                {setSoundName('Heater 1');
+                let audio = new Audio(s1);
+                audio.play();}}>Q</button>
+
+                <button style = {bstyle} onClick = {()=>
+                {setSoundName('Heater 2');
+                let audio = new Audio(s2);
+                audio.play();}}>W</button>
+
+                <button style = {bstyle} onClick = {()=>
+                {setSoundName('Heater 3');
+                let audio = new Audio(s3);
+                audio.play();}}>E</button>
+
+                <button style = {bstyle} onClick = {()=>
+                {setSoundName('Heater 4');
+                let audio = new Audio(s4);
+                audio.play();}}>A</button>
+
+                <button style = {bstyle} onClick = {()=>
+                {setSoundName('Clap');
+                let audio = new Audio(s5);
+                audio.play();}}>S</button>
+
+                <button style = {bstyle} onClick = {()=>
+                {setSoundName('Open HH');
+                let audio = new Audio(s6);
+                audio.play();}}>D</button>
+
+                <button style = {bstyle} onClick = {()=>
+                {setSoundName("Kick n'Hat");
+                let audio = new Audio(s7);
+                audio.play();}}>Z</button>
+
+                <button style = {bstyle} onClick = {()=>
+                {setSoundName('Kick');
+                let audio = new Audio(s8);
+                audio.play();}}>X</button>
+
+                <button style = {bstyle} onClick = {()=>
+                {setSoundName('Closed HH');
+                let audio = new Audio(s9);
+                audio.play();}}>C</button>
             </div>
             <h1 id="display" style={dstyle}>{soundName}</h1>
             
