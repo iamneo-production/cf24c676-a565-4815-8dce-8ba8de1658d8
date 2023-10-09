@@ -1,0 +1,85 @@
+.App {
+  height : 450px;
+  width : 350px;
+  background-color : black;
+  position : relative;
+  left : 600px;
+  top : 150px;
+}
+
+.AC {
+  background-color : #AC3939;
+    height : 70px;
+    width : 170px;
+    color : white;
+    position : absolute;
+    left :7px;
+    top: 90px;
+    font-weight: bold;
+    font-size: large;
+}
+
+.AC:hover {
+  background-color: violet;
+  color : black;
+}
+
+.op{
+  color : white;
+  background-color: #666666;
+  font-weight: bold;
+  font-size: large;
+  width : 82px;
+  height : 70px;
+}
+
+.op:hover {
+  color : black;
+  background-color: violet;
+}
+
+.eq {
+  width : 82px;
+  height : 135px;
+  background-color: #004466;
+  position : absolute;
+  top : 308px;
+  left : 262px;
+  font-weight: bold;
+  font-size: large;
+  color:white;
+}
+
+.eq:hover {
+  background-color: violet;
+  color : black;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
